@@ -1,0 +1,97 @@
+// Calc App C++
+// Yusuf Tariq
+
+# include <iostream>
+# include <cmath>
+using namespace std;
+
+int main()
+{
+    bool start = true;
+    string yN = "yes";
+   
+    
+    while (start == true)
+    {
+        cout << "≈≈≈≈≈≈≈≈≈≈ Calculator App ≈≈≈≈≈≈≈≈≈≈\n\n";
+    
+        int operation;
+        double num1, num2;
+    
+        cout << "operations: \n 1: + \n 2: - \n 3: * \n 4: / \n 5: % \n 6: ^ \n\n" ;
+        cout << "What operation do you want to use? ";
+        cin >> operation;
+        if (operation == 0 || operation > 6)
+        {
+            cout << "Number typed is not valid\n\n";
+            cout << "≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈";
+            return 0;
+        }
+    
+        cout << "\nWhat is your first number? ";
+        cin >> num1;
+        cout << "\nWhat is your second number? ";
+        cin >> num2;
+    
+        double answer;
+    
+        if (operation == 1)
+        {
+            answer = num1 + num2;
+            cout << "\nThe answer is " << answer;
+            cout << "\n\n≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈";
+        }
+        else if (operation == 2)
+        {
+            answer = num1 - num2;
+            cout << "\nThe answer is " << answer;
+            cout << "\n\n≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈";
+        }
+        else if (operation == 3)
+        {
+            answer = num1 * num2;
+            cout << "\nThe answer is " << answer;
+            cout << "\n\n≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈";
+        }
+        else if (operation == 4)
+        {
+            answer = num1 / num2;
+            cout << "\nThe answer is " << answer;
+            cout << "\n\n≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈";
+        }
+        else if (operation == 5)
+        {
+            int newNum1 = static_cast<int>(num1);
+            int newNum2 = static_cast<int>(num2);
+            answer = newNum1 % newNum2;
+            cout << "\nThe answer is " << answer;
+            cout << "\n\n≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈";
+        }
+        else if (operation == 6)
+        {
+            answer = pow(num1,num2);
+            cout << "\nThe answer is " << answer;
+            cout << "\n\n≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈";
+        }
+        else
+        {
+            cout << "Could not compute";
+            cout << "\n\n≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈";
+        }
+    
+        cout << "\n\nDo you want to use the calc app (enter yes or no)? ";
+        cin >> yN;
+        if (yN == "yes")
+        {
+            start = true;
+        }
+        else
+        {
+            cout << "\nThank you for using the calc app!";
+            start = false;
+        }
+    
+    }
+    
+    return 0;
+}
